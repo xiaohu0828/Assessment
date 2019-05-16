@@ -1,5 +1,5 @@
 # Introduction 
-Blue Harvest Backend Code Assessment
+Backend Code Assessment
 
 The assessment consists of an API to be used for opening secondary current accounts of already existent customers.
 
