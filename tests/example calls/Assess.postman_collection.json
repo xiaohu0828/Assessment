@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "e6b4c82f-9e0e-4482-a1cb-0465bd3ee570",
+		"name": "Assess",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetTransactionByAccountId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:7010/api/v1/transactions/850E5D08-24C2-42D2-A09E-AB7B79DB3890",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7010",
+					"path": [
+						"api",
+						"v1",
+						"transactions",
+						"850E5D08-24C2-42D2-A09E-AB7B79DB3890"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateNewTransation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"AccountIdFrom\":\"4F3660BE-1D10-4433-9F09-4EC150CF3CEB\",\n\t\"AccountIdTo\":\"850E5D08-24C2-42D2-A09E-AB7B79DB3890\",\n\t\"Amount\":10,\n\t\"Currency\":\"SEK\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7010/api/v1/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7010",
+					"path": [
+						"api",
+						"v1",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllCustomerInfo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5860/api/v1/customers/DF8E3ED7-4896-4714-BD47-37C12FD5392E",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5860",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"DF8E3ED7-4896-4714-BD47-37C12FD5392E"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateNewSecondaryAccount",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"CustomerID\":\"DF8E3ED7-4896-4714-BD47-37C12FD5392E\",\n\t\"InitialCredit\":10\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5860/api/v1/accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5860",
+					"path": [
+						"api",
+						"v1",
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

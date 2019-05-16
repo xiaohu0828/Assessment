@@ -1,0 +1,23 @@
+# NOTE remember to choose a rest-client environment in the bottom of VS Code 
+# For more info: https://marketplace.visualstudio.com/items?itemName=humao.rest-client#environments
+
+@host = http://localhost:5860
+
+@customerId = DF8E3ED7-4896-4714-BD47-37C12FD5392E
+
+@customer2Id = 2DB0AB71-E14C-436A-BA59-D58205D8EA6C
+
+### Get User information showing Name, Surname, balance, and transactions of the accounts
+GET  {{host}}/api/v1/customers/{{customerId}}
+
+### Get User information showing Name, Surname, balance, and transactions of the accounts
+GET  {{host}}/api/v1/customers/{{customer2Id}}
+
+### Create new account for user 
+POST {{host}}/api/v1/accounts HTTP/1.1
+content-type: application/json
+
+{
+	"CustomerID":"DF8E3ED7-4896-4714-BD47-37C12FD5392E",
+	"InitialCredit":10000.20
+}
